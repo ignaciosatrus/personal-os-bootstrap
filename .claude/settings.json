@@ -1,4 +1,19 @@
 {
+  "_description": "Claude Code project-level settings — {{OPERATOR_NAME}} OS",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $CLAUDE_PROJECT_DIR/scripts/init-session.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Read",
@@ -8,7 +23,8 @@
       "Bash(git log:*)",
       "Bash(git diff:*)",
       "Bash(mkdir:*)",
-      "Bash(touch:*)"
+      "Bash(touch:*)",
+      "Bash(bash $CLAUDE_PROJECT_DIR/scripts/init-session.sh)"
     ]
   }
 }

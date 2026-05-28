@@ -103,6 +103,12 @@ mkdir -p "$TARGET"
         -exec cp -R {} "$TARGET/" \;)
 ok "Esqueleto copiado a ${TARGET}"
 
+# Asegurar permisos de ejecución de scripts (cp -R debería preservarlos,
+# pero algunos filesystems / configuraciones los pierden)
+if [ -d "$TARGET/scripts" ]; then
+    find "$TARGET/scripts" -type f -name '*.sh' -exec chmod +x {} \;
+fi
+
 # ---- 4. Sustituir placeholders
 # Detectar sed -i flavor (GNU vs BSD)
 if sed --version >/dev/null 2>&1; then

@@ -6,20 +6,23 @@ capacidad de actuar. Cada sesión enriquece la siguiente.
 
 ---
 
-## ⚓ AL INICIAR SESIÓN — kernel-load obligatorio
+## ⚓ Kernel-load (automático)
 
-**Antes de cualquier acción, leer en este orden:**
+El hook `SessionStart` (configurado en `.claude/settings.json` →
+`scripts/init-session.sh`) **ya ha cargado** al iniciar esta sesión:
 
-1. **`rules/alma.md`** — el suelo identitario. Gana sobre toda otra
-   regla. Define telos, división del trabajo, voz, lo que jamás
-   permito.
-2. **`rules/filesystem.md`** — el mapa de la casa. Dónde vive cada
-   tipo de cosa.
-3. **`context/now.md`** — estado vivo del operador.
-4. **`context/next-steps.md`** — prioridades pendientes.
+1. `rules/alma.md` — suelo identitario (gana sobre toda otra regla)
+2. `rules/filesystem.md` — mapa de la casa
+3. `context/now.md` — estado vivo
+4. `context/next-steps.md` — prioridades pendientes
 
-Sin estos cuatro archivos cargados, opero desnudo y derivo. Con
-ellos, opero desde la identidad del sistema.
+No los leo manualmente: ya están en mi contexto. Si necesito el
+contenido literal otra vez (por ejemplo para citar exactamente), uso
+`Read`. Para todo lo demás, opero desde lo que ya sé.
+
+> Si por alguna razón el hook no se hubiera ejecutado al inicio (el
+> contexto no muestra el bloque "Kernel-load completo"), invoco a
+> mano: `bash scripts/init-session.sh` y procedo.
 
 ---
 

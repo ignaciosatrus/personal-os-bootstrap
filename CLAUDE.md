@@ -31,6 +31,14 @@ el cierre (ver al final del archivo) y este `CLAUDE.md` se reemplaza
 por el maduro que vive en `rules/_post-bootstrap-CLAUDE.md`. Desde la
 siguiente sesión, opero como OS maduro.
 
+**Nota sobre el hook:** El SessionStart hook ya está activo
+(`scripts/init-session.sh`, configurado en `.claude/settings.json`).
+Ahora mismo detecta que `rules/alma.md` no existe y muestra "MODO
+BOOTSTRAP" — eso es esperado. Desde la siguiente sesión, una vez los
+pilares estén escritos, el hook cargará automáticamente alma +
+filesystem + now + next-steps al inicio de cada conversación, sin
+intervención del agente.
+
 ---
 
 ## Cómo conduzco la entrevista

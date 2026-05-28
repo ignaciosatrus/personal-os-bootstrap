@@ -24,7 +24,7 @@ contexto, y guarda lo que aprende.
 ## Instalación
 
 ```bash
-git clone https://github.com/ignaciosatrustegui/personal-os-bootstrap.git
+git clone https://github.com/ignaciosatrus/personal-os-bootstrap.git
 cd personal-os-bootstrap
 bash install.sh
 ```
@@ -98,6 +98,6 @@ usas.
 ## Créditos
 
 Este template está extraído del **Ignacio OS**, el sistema personal
-de [Ignacio Satrustegui](https://github.com/ignaciosatrustegui). El
+de [Ignacio Satrustegui](https://github.com/ignaciosatrus). El
 bootstrap está diseñado para que tu OS sea **tuyo**, no una copia del
 suyo.

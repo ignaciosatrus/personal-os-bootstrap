@@ -22,7 +22,7 @@ usándola. Lo único que necesitas para arrancarlo:
 3. Abrir una terminal y pegar:
 
 ```
-git clone https://github.com/ignaciosatrustegui/personal-os-bootstrap.git
+git clone https://github.com/ignaciosatrus/personal-os-bootstrap.git
 cd personal-os-bootstrap
 bash install.sh
 ```

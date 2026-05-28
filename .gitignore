@@ -1,0 +1,22 @@
+# OS local — no comprometer
+
+.bootstrap-archive/
+.claude/settings.local.json
+
+# Cache y temporales
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Si el operador decide hacer git en su propio ~/[slug]-os/, este
+# .gitignore queda como base. No comprometer secretos.
+.env
+.env.*
+*.key
+*.pem
